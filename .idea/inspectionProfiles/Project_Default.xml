@@ -20,6 +20,7 @@
         <option name="m_maxLength" value="45" />
       </scope>
       <option name="m_minLength" value="3" />
+      <option name="m_maxLength" value="35" />
     </inspection_tool>
     <inspection_tool class="PhpMethodOrClassCallIsNotCaseSensitiveInspection" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="PhpMissingDocCommentInspection" enabled="true" level="WARNING" enabled_by_default="true" />

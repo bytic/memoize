@@ -12,6 +12,9 @@ class BaseObject
 {
     use Memoizable;
 
+    /**
+     * @return mixed|null
+     */
     public function memoizedFunction()
     {
         $calls = 0;
@@ -22,5 +25,20 @@ class BaseObject
                 return $calls;
             }
         );
+    }
+
+    /**
+     * @return mixed|null
+     */
+    public function memoizedMethod()
+    {
+        return $this->memoizeWithMethod(__METHOD__, 'longFunctionCall');
+    }
+
+    protected function longFunctionCall(): int
+    {
+        static $calls = 0;
+        $calls++;
+        return $calls;
     }
 }

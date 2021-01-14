@@ -20,7 +20,7 @@ class Memoizer
     public static function memoize($key, $callback)
     {
         if (!static::has($key)) {
-            return static::set($key, $callback);
+            static::set($key, $callback);
         }
         return static::get($key, $callback);
     }
@@ -46,11 +46,11 @@ class Memoizer
 
     /**
      * @param $key
-     * @return mixed
+     * @return bool
      */
-    public static function has($key)
+    public static function has($key): bool
     {
-        $key = static::formatKey( $key);
+        $key = static::formatKey($key);
         return static::runStorageMethod('has', [$key]);
     }
 
