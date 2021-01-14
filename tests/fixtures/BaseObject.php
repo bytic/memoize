@@ -2,7 +2,7 @@
 
 namespace ByTIC\Memoize\Tests\Fixtures;
 
-use ByTIC\Memoize\Traits\CanMemoize;
+use ByTIC\Memoize\Traits\Memoizable;
 
 /**
  * Class BaseObject
@@ -10,7 +10,7 @@ use ByTIC\Memoize\Traits\CanMemoize;
  */
 class BaseObject
 {
-    use CanMemoize;
+    use Memoizable;
 
     public function memoizedFunction()
     {

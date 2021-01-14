@@ -5,10 +5,10 @@ namespace ByTIC\Memoize\Traits;
 use ByTIC\Memoize\Memoizer;
 
 /**
- * Trait CanMemoize
+ * Trait Memoizable
  * @package ByTIC\Memoize\Traits
  */
-trait CanMemoize
+trait Memoizable
 {
     /**
      * @param $key
