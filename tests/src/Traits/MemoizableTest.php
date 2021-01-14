@@ -26,4 +26,16 @@ class MemoizableTest extends AbstractTest
         self::assertSame(1, $object1->memoizedMethod());
         self::assertSame(1, $object1->memoizedMethod());
     }
+
+    public function test_unmemoize()
+    {
+        $object1 = new BaseObject();
+        self::assertFalse($object1->memoized('test'));
+
+        $object1->memoize('test', 2);
+        self::assertTrue($object1->memoized('test'));
+
+        $object1->unmemoize('test');
+        self::assertFalse($object1->memoized('test'));
+    }
 }

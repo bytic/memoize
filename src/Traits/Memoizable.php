@@ -28,6 +28,16 @@ trait Memoizable
     {
         return Memoizer::has([$this->memoizeRoot(), $key]);
     }
+
+    /**
+     * @param $key
+     * @return void
+     */
+    public function unmemoize($key)
+    {
+        return Memoizer::forget([$this->memoizeRoot(), $key]);
+    }
+
     /**
      * @param $key
      * @param $value

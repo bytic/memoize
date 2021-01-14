@@ -56,6 +56,16 @@ class Memoizer
 
     /**
      * @param $key
+     * @return void
+     */
+    public static function forget($key): void
+    {
+        $key = static::formatKey($key);
+        static::runStorageMethod('forget', [$key]);
+    }
+
+    /**
+     * @param $key
      * @param null $value
      * @return mixed
      */
